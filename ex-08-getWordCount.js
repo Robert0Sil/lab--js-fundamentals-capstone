@@ -7,16 +7,50 @@
  * Note that your counts should NOT be case-sensitive.
  *
 **/
+function getWordCount(tex){
+  var nobj = { };
+  var obj = { };
+  var narr = [ ];
+  var arr = tex.split(" ");
+  console.log(arr);
+  for(var i = 0; i < arr.length; i++){
+    var pal = arr[i].toLowerCase();
+    var str = "";
+    for(var j = 0; j < pal.length; j++){
+      var letr = pal[j];
+      if(letr !== "!" && letr !== "?" && letr !== "," && letr !== "."){
+        str = str + letr;
+      }
 
+    }
+    narr.push(str);
+    console.log(str);
 
+    pal = str;
+    obj[pal] = 1;
+    //console.log(obj);
+  }
+  console.log(narr);
+  console.log(obj);
+  for(var pro in obj){
+    var cont = 0;
+    for(var i = 0; i < narr.length; i++){
+      var pala = arr[i];
+      if(pala === pro){
+        cont = cont + 1;
+        //count = count + 1;
+      }//else{
 
-
-
-
-
-
-
-
+    }
+    //console.log(cont);
+    nobj[pro] = cont;
+    //console.log(cont);
+  }
+    //obj[pal] = 1;
+  //}
+  console.log(nobj);
+  return nobj;
+}
 
 //*~*~*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*~*~*~*~
 

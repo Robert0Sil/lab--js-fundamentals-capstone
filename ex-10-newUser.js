@@ -16,7 +16,14 @@
  *     has permissions -- should return true.
  *
 **/
+function User(nom, rol){
+  var obj = {
+    name: nom,
+    role: rol,
+    createdAt: Date.now()
+  }
 
+}
 
  //*~*~*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*~*~*~*~
 

@@ -7,13 +7,21 @@
   *
   *
  **/
+function where(arr, obj){
+  var nobj = { };
+  var narr = [ ];
+  for(var i = 0; i < arr.length; i++){
+    var objt = arr[i];
+    for(var pro in objt){
+      if(objt[pro] = obj){
+        narr.push(objt[pro]);
+      }
 
-
-
-
-
-
-
+    }
+  }
+  console.log(narr);
+  return narr;
+}
 
 //*~*~*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*~*~*~*~
 

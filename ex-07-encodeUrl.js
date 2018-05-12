@@ -19,10 +19,30 @@
 *  ' - %27
 *
 **/
+function encodeURL(str){
+  var url = "";
+  //console.log(str);
+  for(var i = 0; i < str.length; i++){
+    letr = str[i];
+    if(str[i] === " "){
+      letr = "%20";
+    }else if(str[i] === "!"){
+      letr = "%21";
+    }else if(str[i] === '"'){
+      letr = '%22';
+    }else if(str[i] === "$"){
+      letr = "%24";
+    }else if(str[i] === '%'){
+      letr = '%25';
+    }else if(str[i] === "'"){
+      letr = "%27";
+    }
 
-
-
-
+    url = url + letr;
+  }
+  console.log(url);
+  return url;
+}
 
 //*~*~*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*~*~*~*~
 
@@ -47,6 +67,6 @@ console.log();
 
 var encodedURL4 = encodeURL("20% of $100")
 console.log("[4] Should return '20%25%20of%20%24100'")
-console.assert(encodedURL3 === "20%25%20of%20%24100")
+console.assert(encodedURL4 === "20%25%20of%20%24100")                         //Le cambié el número a la variable ya que estaba así "encodedURL3"
 console.log("=================================================================================");
 console.log();

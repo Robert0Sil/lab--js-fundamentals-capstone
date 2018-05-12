@@ -16,13 +16,34 @@
  *     inputArraySize: 11
  *   }
 **/
+function showStats(num, arr){
+  var obj = { };
+  var cont = 0;
+  var con = 0;
+  var co = 0;
+  for(var i = 0; i < arr.length; i++){
+    var n = arr[i];
 
-
-
-
-
-
-
+    if(num === n){
+      cont = cont + 1;
+    }
+    if(num > n){
+      con = con + 1;
+    }
+    if(num < n){
+      co = co + 1;
+    }
+  }
+  var conta = arr.length;
+  obj = {
+    count_inputEqualTo: cont,
+    count_inputGreaterThan: con,
+    count_inputLessThan: co,
+    inputArraySize: conta
+  }
+  
+  return obj;
+}
 
 //*~*~*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*~*~*~*~
 

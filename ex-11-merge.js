@@ -8,14 +8,12 @@
  *  return the property-values from the object in the 2nd argument.
  *
 **/
+function merge(obj, oobj){
+  var nobj = Object.assign({}, obj, oobj);
 
-
-
-
-
-
-
-
+  console.log(nobj);
+  return nobj;
+}
 
 //*~*~*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*~*~*~*~
 var obj1 = {name: "Shaman Tilroy", age: 33, id: 6288}
