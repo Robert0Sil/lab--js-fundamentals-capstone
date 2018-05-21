@@ -10,16 +10,50 @@
 function where(arr, obj){
   var nobj = { };
   var narr = [ ];
+  var arrt = [ ];
+  var arrtmp = Object.keys(obj).length;
+  var arrtemp = Object.getOwnPropertyNames(obj);
+  //console.log(arrtemp);
   for(var i = 0; i < arr.length; i++){
     var objt = arr[i];
-    for(var pro in objt){
-      if(objt[pro] = obj){
-        narr.push(objt[pro]);
-      }
+    //console.log(objt);
+    //console.log(i);
 
+    for(var pro in objt){
+      //console.log('Propiedad = ', pro);
+      //console.log('Valor = ', objt[pro]);
+      //console.log(pro, val);
+      nobj = {[pro]: objt[pro]};
+      //console.log(nobj);
+      //console.log(obj);
+      for(var tmp in obj){
+        //console.log(objt[pro]);
+        //console.log(obj[tmp]);
+        //console.log(arrtmp);
+        if(arrtmp === 1){
+          if(objt[pro] === obj[tmp]){
+            //console.log('por fin');
+            narr.push(objt);
+          }
+        }else{
+          //for(var i = 0; i< arrtemp.length; i++){
+            //var objtmp = arrtemp[i];
+            //if([objtmp] === [pro]){
+              //if(obj[objtmp] === objt[pro]){
+                //narr.push(objt);
+              //}
+            //}
+          }
+          //if(objtpro[arrtem] === objtmp[arrtem] && objtpro[arrtmp] === objtmp[arrtmp]){
+            //console.log('por fin');
+            //narr.push(objt);
+          //}
+        
+      }
     }
+    //console.log(arrt.length);
   }
-  console.log(narr);
+  //console.log(narr);
   return narr;
 }
 

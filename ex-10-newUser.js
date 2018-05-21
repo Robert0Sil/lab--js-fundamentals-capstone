@@ -17,13 +17,29 @@
  *
 **/
 function User(nom, rol){
+  console.log(nom);
+  console.log(rol);
+
   var obj = {
     name: nom,
     role: rol,
-    createdAt: Date.now()
+    createdAt: Date.now(),
+    hasPermissions: function (rol1, rol2){
+      if(obj.role === rol1 || obj.role === rol2){
+        var res = 'true';
+
+      }else{
+        var res = 'false';
+
+      }
+      console.log(obj.role);
+      return res;
+    }
   }
 
+  return obj;
 }
+
 
  //*~*~*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*~*~*~*~
 
@@ -77,6 +93,6 @@ console.log("=======================================");
 console.log();
 
 console.log("[10] Should return true for permissions");
-console.assert(simpleUser.hasPermissions(contentCreatorList) === true )
+console.assert(adminUser.hasPermissions(contentCreatorList) === true )
 console.log("=======================================");
 console.log();

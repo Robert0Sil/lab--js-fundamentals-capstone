@@ -12,7 +12,7 @@ function getWordCount(tex){
   var obj = { };
   var narr = [ ];
   var arr = tex.split(" ");
-  console.log(arr);
+  //console.log(arr);
   for(var i = 0; i < arr.length; i++){
     var pal = arr[i].toLowerCase();
     var str = "";
@@ -24,31 +24,30 @@ function getWordCount(tex){
 
     }
     narr.push(str);
-    console.log(str);
+    //console.log(str);
 
     pal = str;
     obj[pal] = 1;
     //console.log(obj);
   }
-  console.log(narr);
-  console.log(obj);
+  //console.log(narr);
+  //console.log(obj);
   for(var pro in obj){
     var cont = 0;
     for(var i = 0; i < narr.length; i++){
-      var pala = arr[i];
+      var pala = narr[i];
       if(pala === pro){
         cont = cont + 1;
-        //count = count + 1;
-      }//else{
+
+      }
 
     }
     //console.log(cont);
     nobj[pro] = cont;
     //console.log(cont);
   }
-    //obj[pal] = 1;
-  //}
-  console.log(nobj);
+
+  //console.log(nobj);
   return nobj;
 }
 
